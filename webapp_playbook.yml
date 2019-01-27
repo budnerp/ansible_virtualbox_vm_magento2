@@ -1,0 +1,3 @@
+---
+  - hosts: webapp
+  - remote_user: root
