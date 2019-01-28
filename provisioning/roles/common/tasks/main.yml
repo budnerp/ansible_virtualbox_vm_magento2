@@ -1,0 +1,30 @@
+---
+# common role main.yml
+
+  - name: Enable EPEL repository
+    yum:
+      name: epel-release
+      state: installed
+
+#  - name: Install yum-utils
+#    yum:
+#      name: yum-utils
+#      state: installed
+
+  - name: enable remi repository (el7)
+    yum:
+      name: http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+      state: installed
+    when: ansible_os_family == "RedHat" and ansible_distribution_major_version == "7"
+    register: remiel7
+    until: remiel7|success
+    retries: 10
+    delay: 5
+
+  - name: disable remi-safe repository
+    command: yum-config-manager --disable remi-safe
+    when: remiel7.changed
+
+  - name: enable remi repository
+    command: yum-config-manager --enable remi
+    when: remiel7.changed

@@ -1,0 +1,12 @@
+---
+# webapp_playbook.yml
+
+- name: Install common packages
+- hosts: webapps
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  become_user: root
+
+  roles:
+    - common # enable EPEL and Remi's repositories
