@@ -4,14 +4,15 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
 ## What's inside?
 - Based on [centos/7](https://app.vagrantup.com/centos/boxes/7) box
 - Defaults: 
-    - Insecure SSH keys used
     - Ansible (local) 2.x installed 
     - Machine "webapp":
         - private_network, ip: 192.168.33.10
         - 1 CPU, 1024MB of memory
+        - SSH on port 22
 
 ## Prerequisities
 - Git
+- rsync (or rsync.exe) on the path
 - Vagrant ver. >= 2.0
 - Virtual Box ver. >= 2.0
 
@@ -47,8 +48,6 @@ vagrant ssh webapp
 - VirtualBox Guest Additions [https://www.vagrantup.com/docs/virtualbox/boxes.html#virtualbox-guest-additions]()
 - Guest Additions manual [https://www.virtualbox.org/manual/ch04.html]()
 - vagrant-vbguest repository [https://github.com/dotless-de/vagrant-vbguest]() 
-- yum-utils [https://github.com/rpm-software-management/yum-utils]()
-- Remi's RPM repository [https://rpms.remirepo.net/]()
 - Basic writing and formatting syntax [https://help.github.com/articles/basic-writing-and-formatting-syntax/]()
 
 ## License

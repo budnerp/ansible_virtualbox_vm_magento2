@@ -1,17 +1,10 @@
 ---
-# common role main.yml
-
   - name: Enable EPEL repository
     yum:
       name: epel-release
       state: installed
 
-#  - name: Install yum-utils
-#    yum:
-#      name: yum-utils
-#      state: installed
-
-  - name: enable remi repository (el7)
+  - name: Enable remi repository (el7)
     yum:
       name: http://rpms.remirepo.net/enterprise/remi-release-7.rpm
       state: installed

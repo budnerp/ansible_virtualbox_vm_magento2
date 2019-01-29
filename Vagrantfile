@@ -16,7 +16,14 @@ Vagrant.configure("2") do |config|
     # SSH port is forwarded by default
     # config.vm.network "forwarded_port", guest: 22, host: 2222
 
+    # Disable default Vagrant root sync
     config.vm.synced_folder ".", "/vagrant", type: "rsync",
+        rsync__exclude: ".git/",
+        disabled: true
+
+    # Synchronize provisioning folder
+    config.vm.synced_folder "./provisioning", "/vagrant/provisioning", type: "rsync", create: true,
+        rsync__auto: false,
         rsync__exclude: ".git/"
 
     config.vm.provision "shell", inline: <<-SHELL
@@ -27,22 +34,22 @@ Vagrant.configure("2") do |config|
         yum -y install ansible
     SHELL
 
+    # Primary machine definition
     config.vm.define "webapp", primary: true do |machine|
         machine.vm.hostname = "webapp"
         machine.vm.network "private_network", ip: "192.168.33.10"
-
-        # TODO: Work on Ansible
-#        machine.vm.provision :ansible_local do |ansible|
-#            # ansible.verbose = "v"
-#            ansible.compatibility_mode = "2.0"
-#            ansible.playbook = "provisioning/webapp_playbook.yml"
-#        end
-
         machine.vm.provider "virtualbox" do |vb|
             vb.name = "vagrant_ansible_webapp"
             vb.gui = false
             vb.memory = "1024"
             vb.cpus = 1
         end
+    end
+
+    config.vm.provision :ansible_local do |ansible|
+        ansible.verbose = "v"
+        ansible.compatibility_mode = "2.0"
+        ansible.playbook = "./provisioning/webapp_playbook.yml"
+        ansible.inventory_path = "./provisioning/development.ini"
     end
 end
