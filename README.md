@@ -21,29 +21,29 @@ Tested on:
 - Virtual Box 6.0.2 and Vagrant 2.2.3
 
 ## Installation
-- Install VirtualBox Guest Additions plugin
-```
-vagrant plugin install vagrant-vbguest
-```
-- Clone repository, pull sub-modules and start provisioning
-```
-git clone https://github.com/budnerp/vagrant_ansible.git
-git submodule init
-git submodule update
-vagrant up
-```
-- Set a domain in your hosts file (add a line in C:\Windows\System32\drivers\etc\hosts). Refer to Vagrantfile's web.vm.hostname configuration. Example:
-```
-192.168.33.222 webapp.development
-```
-- Validate www server. Example:
-```
-http://webapp.development
-```
-- SSH into the instance. Execute:
-```
-vagrant ssh webapp
-```
+1. Install VirtualBox Guest Additions plugin
+    ```
+    vagrant plugin install vagrant-vbguest
+    ```
+2. Clone repository, pull sub-modules and start provisioning
+    ```
+    git clone https://github.com/budnerp/vagrant_ansible.git
+    git submodule init
+    git submodule update
+    vagrant up
+    ```
+3. Set a domain in your hosts file (add a line in C:\Windows\System32\drivers\etc\hosts). Refer to Vagrantfile's web.vm.hostname configuration. Example:
+    ```
+    192.168.33.10 webapp.development
+    ```
+4. Validate www server. Example:
+    ```
+    http://webapp.development
+    ```
+5. SSH into the instance. Execute:
+    ```
+    vagrant ssh webapp
+    ```
 
 ## Troubleshooting
 #### Guest Addons. Discrepancies between versions od VirtualBox and Guest Additions   
