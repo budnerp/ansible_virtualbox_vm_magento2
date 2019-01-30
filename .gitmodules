@@ -1,0 +1,3 @@
+[submodule "provisioning/roles/ansible_role_extra_repositories"]
+	path = provisioning/roles/ansible_role_extra_repositories
+	url = https://github.com/budnerp/ansible_role_extra_repositories.git

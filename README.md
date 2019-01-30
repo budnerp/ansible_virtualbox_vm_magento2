@@ -54,6 +54,7 @@ Uninstall vagrant-vbguest plugin and install it back again.
 - Guest Additions manual [https://www.virtualbox.org/manual/ch04.html]()
 - vagrant-vbguest repository [https://github.com/dotless-de/vagrant-vbguest]() 
 - Basic writing and formatting syntax [https://help.github.com/articles/basic-writing-and-formatting-syntax/]()
+- Git Tools - Submodules [https://git-scm.com/book/en/v2/Git-Tools-Submodules]()
 
 ## License
 Copyright (c) We Are Interactive under the MIT license.
