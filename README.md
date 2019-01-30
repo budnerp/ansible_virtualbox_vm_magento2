@@ -17,6 +17,7 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
 - Virtual Box ver. >= 2.0
 
 Tested on:
+- Virtual Box 6.0.4 and Vagrant 2.2.3
 - Virtual Box 6.0.2 and Vagrant 2.2.3
 
 ## Installation
@@ -43,6 +44,10 @@ http://webapp.development
 ```
 vagrant ssh webapp
 ```
+
+## Troubleshooting
+#### Guest Addons. Discrepancies between versions od VirtualBox and Guest Additions   
+Uninstall vagrant-vbguest plugin and install it back again.
 
 ## Links
 - VirtualBox Guest Additions [https://www.vagrantup.com/docs/virtualbox/boxes.html#virtualbox-guest-additions]()
