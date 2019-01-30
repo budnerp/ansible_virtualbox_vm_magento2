@@ -16,15 +16,10 @@ Vagrant.configure("2") do |config|
     # SSH port is forwarded by default
     # config.vm.network "forwarded_port", guest: 22, host: 2222
 
-    # Disable default Vagrant root sync
+    # Sync Vagrant root to provide ansible.cfg file
     config.vm.synced_folder ".", "/vagrant", type: "rsync",
-        rsync__exclude: ".git/"#,
-#        disabled: true
-
-    # Synchronize provisioning folder
-#    config.vm.synced_folder "./provisioning", "/vagrant/provisioning", type: "rsync", create: true,
-#        rsync__auto: false,
-#        rsync__exclude: ".git/"
+        rsync__auto: false,
+        rsync__exclude: ".git/"
 
     config.vm.provision "shell", inline: <<-SHELL
         # Install EPEL repository - Extra Packages for Enterprise Linux 7
@@ -51,6 +46,5 @@ Vagrant.configure("2") do |config|
         ansible.compatibility_mode = "2.0"
         ansible.playbook = "./provisioning/webapp_playbook.yml"
         ansible.inventory_path = "./provisioning/development.yml"
-#        ansible.limit = "all"
     end
 end
