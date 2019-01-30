@@ -18,13 +18,13 @@ Vagrant.configure("2") do |config|
 
     # Disable default Vagrant root sync
     config.vm.synced_folder ".", "/vagrant", type: "rsync",
-        rsync__exclude: ".git/",
-        disabled: true
+        rsync__exclude: ".git/"#,
+#        disabled: true
 
     # Synchronize provisioning folder
-    config.vm.synced_folder "./provisioning", "/vagrant/provisioning", type: "rsync", create: true,
-        rsync__auto: false,
-        rsync__exclude: ".git/"
+#    config.vm.synced_folder "./provisioning", "/vagrant/provisioning", type: "rsync", create: true,
+#        rsync__auto: false,
+#        rsync__exclude: ".git/"
 
     config.vm.provision "shell", inline: <<-SHELL
         # Install EPEL repository - Extra Packages for Enterprise Linux 7
@@ -50,6 +50,7 @@ Vagrant.configure("2") do |config|
         ansible.verbose = "v"
         ansible.compatibility_mode = "2.0"
         ansible.playbook = "./provisioning/webapp_playbook.yml"
-        ansible.inventory_path = "./provisioning/development.ini"
+        ansible.inventory_path = "./provisioning/development.yml"
+#        ansible.limit = "all"
     end
 end

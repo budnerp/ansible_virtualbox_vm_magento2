@@ -3,21 +3,32 @@
     yum:
       name: epel-release
       state: installed
+    when: ansible_os_family == "RedHat" and ansible_distribution_major_version == "7"
+    register: epel_result
+    until: epel_result is success
+    retries: 3
+    delay: 5
 
-  - name: Enable remi repository (el7)
+  - name: Enable Remi's repository for CeontOS 7
     yum:
       name: http://rpms.remirepo.net/enterprise/remi-release-7.rpm
       state: installed
     when: ansible_os_family == "RedHat" and ansible_distribution_major_version == "7"
-    register: remiel7
-    until: remiel7|success
-    retries: 10
+    register: remi_result
+    until: remi_result is success
+    retries: 3
     delay: 5
 
-  - name: disable remi-safe repository
+  - name: Disable remi-safe repository
     command: yum-config-manager --disable remi-safe
-    when: remiel7.changed
+    when: remi_result.changed
 
-  - name: enable remi repository
+  - name: Enable Remi's RPM repository
     command: yum-config-manager --enable remi
-    when: remiel7.changed
+    when: remi_result.changed
+
+#  - debug:
+#      var: remi_result
+
+#  - debug:
+#      var: hostvars
