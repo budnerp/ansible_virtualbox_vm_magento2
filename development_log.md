@@ -1,27 +1,31 @@
 # Dev log
 
-#####Initialize Vagrantfile with CentOS 7 
-[https://app.vagrantup.com/centos/boxes/7]()
-``` 
-vagrant init centos/7
+Check repo list
 ```
-
-#####Check repo list on centos
-```
-vagrant ssh webapp
 yum repolist
 ```
 
-#####Check Ansible modules
+Check Ansible modules
 ```
 ansible-doc -l
 ```
 
-#####New submodule creation
+New submodule creation
 1. Create new repository
 2. Add submodule in project repository
 ```
-git submodule add https://github.com/budnerp/ansible_role_apache2.git ansible_role_apache2
+git su
+```
+
+Retry execution of playbook while working on it
+```
+ansible-playbook provisioning/webapp_playbook.yml -i provisioning/development.yml --limit @/vagrant/provisioning/webapp_playbook.retry
+```
+
+Check what is the source repository from which the package was installed
+```
+yum list installed | grep httpd
+yum info httpd 
 ```
 
 ### Issues:
