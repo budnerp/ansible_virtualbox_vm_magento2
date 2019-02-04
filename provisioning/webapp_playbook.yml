@@ -7,4 +7,5 @@
 
   roles:
     - ansible_role_extra_repositories # Enable EPEL and Remi's repositories
-    - ansible_role_apache2 #
+    - ansible_role_apache2
+    - ansible_role_selinux # disable SELinux

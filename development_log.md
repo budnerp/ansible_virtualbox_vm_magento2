@@ -19,6 +19,7 @@ git su
 
 Retry execution of playbook while working on it
 ```
+cd /vagrant
 ansible-playbook provisioning/webapp_playbook.yml -i provisioning/development.yml --limit @/vagrant/provisioning/webapp_playbook.retry
 ```
 
