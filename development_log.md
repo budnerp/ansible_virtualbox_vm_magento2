@@ -22,6 +22,16 @@ Retry execution of playbook while working on it
 ansible-playbook provisioning/webapp_playbook.yml -i provisioning/development.yml --limit @/vagrant/provisioning/webapp_playbook.retry
 ```
 
+List of modules loaded by httpd
+1. CentOS
+    ```
+    httpd -M
+    ```
+2. Ubuntu/Debian
+    ```
+    apache2 -M
+    ```
+
 Check what is the source repository from which the package was installed
 ```
 yum list installed | grep httpd

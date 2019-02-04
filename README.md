@@ -9,6 +9,7 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
         - private_network, ip: 192.168.33.10
         - 1 CPU, 1024MB of memory
         - SSH on port 22
+- Apache 2.x
 
 ## Prerequisities
 - Git
@@ -16,9 +17,9 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
 - Vagrant ver. >= 2.0
 - Virtual Box ver. >= 2.0
 
-Tested on:
-- Virtual Box 6.0.4 and Vagrant 2.2.3
-- Virtual Box 6.0.2 and Vagrant 2.2.3
+## Tested on
+- Virtual Box 6.0.4, Vagrant 2.2.3, Ansible 2.7.6
+- Virtual Box 6.0.2, Vagrant 2.2.3, Ansible 2.7.6
 
 ## Installation
 1. Install VirtualBox Guest Additions plugin
@@ -53,8 +54,16 @@ Uninstall vagrant-vbguest plugin and install it back again.
 - VirtualBox Guest Additions [https://www.vagrantup.com/docs/virtualbox/boxes.html#virtualbox-guest-additions]()
 - Guest Additions manual [https://www.virtualbox.org/manual/ch04.html]()
 - vagrant-vbguest repository [https://github.com/dotless-de/vagrant-vbguest]() 
-- Basic writing and formatting syntax [https://help.github.com/articles/basic-writing-and-formatting-syntax/]()
 - Git Tools - Submodules [https://git-scm.com/book/en/v2/Git-Tools-Submodules]()
+- Basic writing and formatting syntax [https://help.github.com/articles/basic-writing-and-formatting-syntax/]()
+
+## TODO
+-[ ] Allow user to choose system (centos, ubuntu)
+-[ ] Make roles to be both centos/ubuntu friendly
+-[ ] Create Magento 2 role
+    -[ ] create vhost
+    -[ ] make vhost work for apache
+    -[ ] make vhost work for nginx
 
 ## License
 Copyright (c) We Are Interactive under the MIT license.
