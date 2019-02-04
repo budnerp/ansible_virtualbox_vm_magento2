@@ -12,4 +12,4 @@ Ansible role for PHP 7.2 installation for CentOS 7
 ## TO DO
 
 ## License
-Copyright (c) We Are Interactive under the MIT license.) We Are Interactive under the MIT license.
+Copyright (c) We Are Interactive under the MIT license.
