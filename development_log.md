@@ -33,6 +33,16 @@ List of modules loaded by httpd
     apache2 -M
     ```
 
+Check if a package is available in repositories
+1. CentOS
+    ```
+    yum info php72
+    ```
+2. Ubuntu/Debian
+    ```
+    apt-cache search php 
+    ```
+
 Check what is the source repository from which the package was installed
 ```
 yum list installed | grep httpd

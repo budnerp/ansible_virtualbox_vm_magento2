@@ -1,0 +1,9 @@
+---
+#  - name: Install PHP 7.2
+#    yum
+
+#  - debug:
+#      var: httpd_result
+
+#  - debug:
+#      var: hostvars

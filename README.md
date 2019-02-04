@@ -60,6 +60,7 @@ Uninstall vagrant-vbguest plugin and install it back again.
 ## TODO
 -[ ] Allow user to choose system (centos, ubuntu)
 -[ ] Make roles to be both centos/ubuntu friendly
+-[ ] Ask a user whether to update repositories on machine provisioning/up
 -[ ] Create Magento 2 role
     -[ ] create vhost
     -[ ] make vhost work for apache
