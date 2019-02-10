@@ -13,6 +13,7 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
 - SELinux disabled
 - Apache 2.4
 - PHP 7.2
+- Common tools: htop, vim, mc
 
 ## Prerequisities
 - Git
