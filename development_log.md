@@ -49,6 +49,16 @@ yum list installed | grep httpd
 yum info httpd 
 ```
 
+Check PHP loaded modules
+```
+php --modules
+```
+
+Check memory status
+```
+free -h
+```
+
 ### Issues:
 #### Unreachable:
 CLI message:

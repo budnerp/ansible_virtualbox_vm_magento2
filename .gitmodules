@@ -10,3 +10,6 @@
 [submodule "provisioning/roles/ansible_role_php72"]
 	path = provisioning/roles/ansible_role_php72
 	url = https://github.com/budnerp/ansible_role_php72.git
+[submodule "provisioning/roles/ansible_role_commons"]
+	path = provisioning/roles/ansible_role_commons
+	url = https://github.com/budnerp/ansible_role_commons.git

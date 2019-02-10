@@ -9,7 +9,10 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
         - private_network, ip: 192.168.33.10
         - 1 CPU, 1024MB of memory
         - SSH on port 22
-- Apache 2.x
+- Epel and Remi's RPM repositories
+- SELinux disabled
+- Apache 2.4
+- PHP 7.2
 
 ## Prerequisities
 - Git
