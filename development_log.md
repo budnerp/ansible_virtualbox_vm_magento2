@@ -12,9 +12,10 @@ ansible-doc -l
 
 New submodule creation
 1. Create new repository
-2. Add submodule in project repository
+2. Navigate to Ansible's role folder 
+3. Add submodule in project repository
 ```
-git su
+git submodule add https://github.com/budnerp/ansible_role_apache2.git ansible_role_apache2
 ```
 
 Retry execution of playbook while working on it
