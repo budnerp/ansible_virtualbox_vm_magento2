@@ -43,6 +43,11 @@ Check if a package is available in repositories
     apt-cache search php 
     ```
 
+Check server MPM
+```
+httpd -V
+```
+
 Check what is the source repository from which the package was installed
 ```
 yum list installed | grep httpd
