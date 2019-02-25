@@ -12,7 +12,8 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
 - Epel and Remi's RPM repositories
 - SELinux disabled
 - Apache 2.4
-- PHP 7.2
+- PHP 7.2 with PHP-FPM 
+- Xdebug for PHP 7.2 on port 9000
 - Common tools: htop, vim, mc
 
 ## Prerequisities

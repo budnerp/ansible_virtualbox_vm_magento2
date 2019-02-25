@@ -38,6 +38,7 @@ Check if a package is available in repositories
 1. CentOS
     ```
     yum info php72
+    yum search xdebug
     ```
 2. Ubuntu/Debian
     ```
