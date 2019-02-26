@@ -3,6 +3,7 @@
 Check repo list
 ```
 yum repolist
+yum repolist enabled | grep mysql
 ```
 
 Check Ansible modules
@@ -20,6 +21,7 @@ git submodule add https://github.com/budnerp/ansible_role_apache2.git ansible_ro
 
 Retry execution of playbook while working on it
 ```
+vagrant ssh
 cd /vagrant
 ansible-playbook provisioning/webapp_playbook.yml -i provisioning/development.yml --limit @/vagrant/provisioning/webapp_playbook.retry
 ```
@@ -39,6 +41,7 @@ Check if a package is available in repositories
     ```
     yum info php72
     yum search xdebug
+    yum repolist all | grep mysql
     ```
 2. Ubuntu/Debian
     ```

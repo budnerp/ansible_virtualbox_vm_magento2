@@ -12,3 +12,4 @@
     - ansible_role_selinux # disable SELinux
     - ansible_role_php72
     - ansible_role_php72_xdebug
+    - ansible_role_mysql

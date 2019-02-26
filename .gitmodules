@@ -16,3 +16,6 @@
 [submodule "provisioning/roles/ansible_role_php72_xdebug"]
 	path = provisioning/roles/ansible_role_php72_xdebug
 	url = https://github.com/budnerp/ansible_role_php72_xdebug.git
+[submodule "provisioning/roles/ansible_role_mysql"]
+	path = provisioning/roles/ansible_role_mysql
+	url = https://github.com/budnerp/ansible_role_mysql.git

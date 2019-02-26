@@ -3,6 +3,7 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
 
 ## What's inside?
 - Based on [centos/7](https://app.vagrantup.com/centos/boxes/7) box
+    - Python 2.7
 - Defaults: 
     - Ansible (local) 2.x installed 
     - Machine "webapp":
@@ -14,7 +15,8 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
 - Apache 2.4
 - PHP 7.2 with PHP-FPM 
 - Xdebug for PHP 7.2 on port 9000
-- Common tools: htop, vim, mc
+- MySQL 5.7 on port 3306
+- Common tools: htop, vim, mc, lsof
 
 ## Prerequisities
 - Git
@@ -40,11 +42,11 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
     ```
 3. Set a domain in your hosts file (add a line in C:\Windows\System32\drivers\etc\hosts). Refer to Vagrantfile's web.vm.hostname configuration. Example:
     ```
-    192.168.33.10 webapp.development
+    192.168.33.10 webapp
     ```
 4. Validate www server. Example:
     ```
-    http://webapp.development
+    http://webapp
     ```
 5. SSH into the instance. Execute:
     ```
