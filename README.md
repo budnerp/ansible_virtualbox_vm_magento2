@@ -63,6 +63,8 @@ Uninstall vagrant-vbguest plugin and install it back again.
 - vagrant-vbguest repository [https://github.com/dotless-de/vagrant-vbguest]() 
 - Git Tools - Submodules [https://git-scm.com/book/en/v2/Git-Tools-Submodules]()
 - Basic writing and formatting syntax [https://help.github.com/articles/basic-writing-and-formatting-syntax/]()
+- Latest configuration ansible.cfg in source control [https://raw.githubusercontent.com/ansible/ansible/devel/examples/ansible.cfg]()
+- 7 Tips To Turbo-charge Your Ansible [https://shadow-soft.com/turbo-charge-your-ansible/]()
 
 ## TODO
 -[ ] Allow user to choose system (centos, ubuntu)
