@@ -19,6 +19,13 @@ New submodule creation
 git submodule add https://github.com/budnerp/ansible_role_apache2.git ansible_role_apache2
 ```
 
+Removing submodule
+```
+git submodule deinit -f provisioning/roles/ansible_role_rabbitmq
+rm -rf .git/modules/provisioning/roles/ansible_role_rabbitmq
+git rm -f provisioning/roles/ansible_role_rabbitmq
+```
+
 Execute playbook inside VM
 ```
 ansible-playbook /vagrant/provisioning/testing_playbook.yml -i /vagrant/provisioning/development.yml

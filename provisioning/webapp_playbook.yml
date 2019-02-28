@@ -14,4 +14,3 @@
     - ansible_role_php72_xdebug
     - ansible_role_mysql
     - ansible_role_docker_ce
-    - ansible_role_rabbitmq
