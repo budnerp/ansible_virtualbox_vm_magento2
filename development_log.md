@@ -19,6 +19,11 @@ New submodule creation
 git submodule add https://github.com/budnerp/ansible_role_apache2.git ansible_role_apache2
 ```
 
+Execute playbook inside VM
+```
+ansible-playbook /vagrant/provisioning/testing_playbook.yml -i /vagrant/provisioning/development.yml
+```
+
 Retry execution of playbook while working on it
 ```
 vagrant ssh
