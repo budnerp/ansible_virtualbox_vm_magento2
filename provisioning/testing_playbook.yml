@@ -7,3 +7,4 @@
 
   roles:
     - ansible_role_docker_ce
+    - ansible_role_docker_rabbitmq
