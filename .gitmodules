@@ -25,3 +25,6 @@
 [submodule "provisioning/roles/ansible_role_docker_rabbitmq"]
 	path = provisioning/roles/ansible_role_docker_rabbitmq
 	url = https://github.com/budnerp/ansible_role_docker_rabbitmq.git
+[submodule "provisioning/roles/ansible_role_rabbitmq"]
+	path = provisioning/roles/ansible_role_rabbitmq
+	url = https://github.com/budnerp/ansible_role_rabbitmq.git
