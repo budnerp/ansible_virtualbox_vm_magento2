@@ -11,10 +11,11 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
         - 1 CPU, 1024MB of memory
         - SSH on port 22
 - Epel and Remi's RPM repositories
-- Common tools: htop, vim, mc, lsof
+- Common tools: `htop`, `vim`, `mc`, `lsof`, `wget`
 - SELinux disabled
 - Apache 2.4
-- PHP 7.2 with PHP-FPM 
+- PHP 7.2 with PHP-FPM
+- Composer (global)
 - Xdebug for PHP 7.2 on port 9000
 - MySQL 5.7 on port 3306
 - RabbitMQ 3.7 and it's dependency Erlang 21.2

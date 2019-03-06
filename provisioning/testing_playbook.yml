@@ -7,4 +7,5 @@
 
   roles:
 #    - ansible_role_docker_ce
-    - ansible_role_rabbitmq
+#    - ansible_role_rabbitmq
+    - ansible_role_php72
