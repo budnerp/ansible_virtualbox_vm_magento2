@@ -12,6 +12,7 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
         - SSH on port 22
 - Epel and Remi's RPM repositories
 - Common tools: `htop`, `vim`, `mc`, `lsof`, `wget`
+- GIT 2.9
 - SELinux disabled
 - Apache 2.4
 - PHP 7.2 with PHP-FPM
@@ -53,6 +54,11 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
 5. SSH into the instance. Execute:
     ```
     vagrant ssh webapp
+    ```
+6. Setup GIT config (if ansible_role_git is a part of playbook)
+    ```
+    $ git config --global user.name "John Doe"
+    $ git config --global user.email johndoe@example.com
     ```
 
 ## Troubleshooting
