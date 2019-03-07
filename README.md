@@ -62,6 +62,13 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
     ```
 
 ## Troubleshooting
+#### Vagrant files on VM does not reflect local repository
+If you made changes on host machine (eg. changed roles, Vagranfile etc.) run
+```
+vagrant rsync
+```
+or upload files manually (eg. via GUI like PhpStorm)
+   
 #### Guest Addons. Discrepancies between versions od VirtualBox and Guest Additions   
 Uninstall vagrant-vbguest plugin and install it back again.
 
