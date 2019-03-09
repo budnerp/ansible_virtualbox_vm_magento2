@@ -19,7 +19,7 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
 - Composer (global)
 - Xdebug for PHP 7.2 on port 9000
 - MySQL 5.7 on port 3306
-- Redis 5.0 on port 6379
+- Redis 5.0 on port 6379, 3 databases by default
 - RabbitMQ 3.7 and it's dependency Erlang 21.2
 
 ## Prerequisities
