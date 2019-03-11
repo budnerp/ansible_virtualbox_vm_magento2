@@ -6,4 +6,5 @@
   become_user: root
 
   roles:
-    - ansible_role_redis
+#    - ansible_role_redis
+    - ansible_role_mailcatcher
