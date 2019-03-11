@@ -16,14 +16,14 @@ New submodule creation
 2. Navigate to Ansible's role folder 
 3. Add submodule in project repository
 ```
-git submodule add https://github.com/budnerp/ansible_role_apache2.git ansible_role_apache2
+git submodule add https://github.com/budnerp/ansible_role_magento23_community.git provisioning/roles/ansible_role_magento23_community
 ```
 
 Removing submodule
 ```
-git submodule deinit -f provisioning/roles/ansible_role_rabbitmq
-rm -rf .git/modules/provisioning/roles/ansible_role_rabbitmq
-git rm -f provisioning/roles/ansible_role_rabbitmq
+git submodule deinit -f provisioning/roles/ansible_role_magento23_community
+rm -rf .git/modules/provisioning/roles/ansible_role_magento23_community
+git rm -f provisioning/roles/ansible_role_magento23_community
 ```
 
 Execute playbook inside VM
