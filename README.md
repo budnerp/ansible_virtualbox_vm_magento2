@@ -72,6 +72,10 @@ or upload files manually (eg. via GUI like PhpStorm)
    
 #### Guest Addons. Discrepancies between versions od VirtualBox and Guest Additions   
 Uninstall vagrant-vbguest plugin and install it back again.
+```
+vagrant plugin uninstall vagrant-vbguest
+vagrant plugin install vagrant-vbguest
+```
 
 ## Links
 - VirtualBox Guest Additions [https://www.vagrantup.com/docs/virtualbox/boxes.html#virtualbox-guest-additions]()
