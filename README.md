@@ -29,8 +29,8 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
 - Virtual Box ver. >= 2.0
 
 ## Tested on
-- Virtual Box 6.0.4, Vagrant 2.2.3, Ansible 2.7.6
-- Virtual Box 6.0.2, Vagrant 2.2.3, Ansible 2.7.6
+- Virtual Box 6.0.4, Vagrant 2.2.3, Ansible 2.7.6, ContOS 7 build 1812.01
+- Virtual Box 6.0.2, Vagrant 2.2.3, Ansible 2.7.6, ContOS 7 build 1812.01
 
 ## Installation
 1. Install VirtualBox Guest Additions plugin
