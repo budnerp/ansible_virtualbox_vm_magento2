@@ -7,4 +7,5 @@
 
   roles:
 #    - ansible_role_redis
-    - ansible_role_mailcatcher
+#    - ansible_role_mailcatcher
+    - ansible_role_magento23_community
