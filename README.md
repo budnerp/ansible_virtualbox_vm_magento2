@@ -11,7 +11,7 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
         - 1 CPU, 1024MB of memory
         - SSH on port 22
 - Epel and Remi's RPM repositories
-- Common tools: `htop`, `vim`, `mc`, `lsof`, `wget`
+- Common tools: `htop`, `vim`, `mc`, `lsof`, `wget`, `unzip`
 - GIT 2.9
 - SELinux disabled
 - Apache 2.4
