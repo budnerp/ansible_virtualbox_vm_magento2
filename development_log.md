@@ -81,6 +81,16 @@ Check memory status
 free -h
 ```
 
+Python pexpect Ansible tasks
+```
+  - yum:
+      name: http://widehat.opensuse.org/opensuse/distribution/leap/42.3/repo/oss/suse/noarch/python-pexpect-3.3-6.1.noarch.rpm
+      state: present
+  - yum:
+      name: python-pexpect
+      state: present
+```
+
 ### Issues:
 #### Unreachable:
 CLI message:

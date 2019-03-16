@@ -11,7 +11,7 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
         - 1 CPU, 1024MB of memory
         - SSH on port 22
 - Epel and Remi's RPM repositories
-- Common tools: `htop`, `vim`, `mc`, `lsof`, `wget`, `unzip`
+- Common tools: `htop`, `vim`, `nano`, `mc`, `lsof`, `wget`, `zip`, `unzip`
 - GIT 2.9
 - SELinux disabled
 - Apache 2.4
@@ -94,6 +94,10 @@ vagrant plugin install vagrant-vbguest
     -[ ] create vhost
     -[ ] make vhost work for apache
     -[ ] make vhost work for nginx
+-[ ] Add role that adds vhost with php site that shows playbook roles and their readme.md files, contact (link with the tool).
+-[ ] Add global variable: admin_name, admin_surname, admin_email to use in git and magento roles; check other roles
+-[ ] Add roles for Magento frontend development
+-[ ] Use host-vars to use role vars in other roles
 
 ## License
 Copyright (c) We Are Interactive under the MIT license.
