@@ -16,5 +16,5 @@
     - ansible_role_mysql
     - ansible_role_redis
 #    - ansible_role_rabbitmq
-    - ansible_role_mailcatcher
+#    - ansible_role_mailcatcher
     - ansible_role_magento23_community
