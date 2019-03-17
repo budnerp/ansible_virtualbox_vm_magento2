@@ -96,6 +96,18 @@ To get PHP current `memory_limit` value:
 php -r "echo ini_get('memory_limit').PHP_EOL;"
 ```
 
+Increase memory on VM
+1. Change values in Vagrant file
+    ```
+    vb.memory = "2048"
+    vb.cpus = 2
+    ```
+2. Increase PHP memory_limit
+    ```
+    php_memory_limit: '1024M'
+    ```
+    
+
 ### Issues:
 #### Unreachable:
 CLI message:

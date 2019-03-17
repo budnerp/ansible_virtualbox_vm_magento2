@@ -8,7 +8,7 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
     - Ansible (local) 2.x installed 
     - Machine "webapp":
         - private_network, ip: 192.168.33.10
-        - 1 CPU, 1024MB of memory
+        - 2 CPU, 2048MB of memory
         - SSH on port 22
 - Epel and Remi's RPM repositories
 - Common tools: `htop`, `vim`, `nano`, `mc`, `lsof`, `wget`, `zip`, `unzip`
@@ -16,11 +16,18 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
 - SELinux disabled
 - Apache 2.4
 - PHP 7.2 with PHP-FPM
+    - memory_limit: 1.5G
+    - opcache_memory_consumption: '512MB'
 - Composer (global)
 - Xdebug for PHP 7.2 on port 9000
 - MySQL 5.7 on port 3306
+    - mysql_innodb_buffer_pool_size: 512MB
 - Redis 5.0 on port 6379, 3 databases by default
 - RabbitMQ 3.7 and it's dependency Erlang 21.2
+- Magento 2.3 Community
+    - Frontend: http://magento23ce.local/
+    - Backend: http://magento23ce.local/admin (default admin user: `admin`, password: `Admin12`)
+    - Optional sample data
 
 ## Prerequisities
 - Git

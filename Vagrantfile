@@ -36,8 +36,8 @@ Vagrant.configure("2") do |config|
         machine.vm.provider "virtualbox" do |vb|
             vb.name = "vagrant_ansible_webapp"
             vb.gui = false
-            vb.memory = "1024"
-            vb.cpus = 1
+            vb.memory = "2048"
+            vb.cpus = 2
         end
     end
 
