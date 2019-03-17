@@ -91,6 +91,11 @@ Python pexpect Ansible tasks
       state: present
 ```
 
+To get PHP current `memory_limit` value:
+```
+php -r "echo ini_get('memory_limit').PHP_EOL;"
+```
+
 ### Issues:
 #### Unreachable:
 CLI message:
