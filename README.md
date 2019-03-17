@@ -28,6 +28,8 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
     - Frontend: http://magento23ce.local/
     - Backend: http://magento23ce.local/admin (default admin user: `admin`, password: `Admin12`)
     - Optional sample data
+    - Creates `magento` MySQL database
+    - Consumes 3 Redis databases 0, 1 and 2
 
 ## Prerequisities
 - Git
