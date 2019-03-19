@@ -24,6 +24,7 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
     - mysql_innodb_buffer_pool_size: 512MB
 - Redis 5.0 on port 6379, 3 databases by default
 - RabbitMQ 3.7 and it's dependency Erlang 21.2
+- Siege 4.0.2
 - Magento 2.3 Community
     - Frontend: http://magento23ce.local/
     - Backend: http://magento23ce.local/admin (default admin user: `admin`, password: `Admin12`)

@@ -40,3 +40,6 @@
 [submodule "provisioning/roles/ansible_role_magento23_community"]
 	path = provisioning/roles/ansible_role_magento23_community
 	url = https://github.com/budnerp/ansible_role_magento23_community.git
+[submodule "provisioning/roles/ansible_role_siege"]
+	path = provisioning/roles/ansible_role_siege
+	url = https://github.com/budnerp/ansible_role_siege.git

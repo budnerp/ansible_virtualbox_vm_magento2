@@ -10,3 +10,4 @@
 #    - ansible_role_mailcatcher
 #    - ansible_role_php72
     - ansible_role_magento23_community
+    - ansible_role_siege
