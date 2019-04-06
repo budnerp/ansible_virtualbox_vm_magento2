@@ -1,0 +1,13 @@
+---
+- hosts: continuous_integration
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  become_user: root
+
+  roles:
+    - ansible_role_extra_repositories
+    - ansible_role_common
+    - ansible_role_git
+    - ansible_role_java8
+    - ansible_role_jenkins

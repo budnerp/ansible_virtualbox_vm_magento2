@@ -3,3 +3,9 @@ webservers:
     webapp:
   vars:
     ansible_connection: local
+
+continuous_integration:
+  hosts:
+    jenkins:
+  vars:
+    ansible_connection: local
