@@ -30,47 +30,20 @@ Vagrant.configure("2") do |config|
     SHELL
 
     # Web server machine definition
-    config.vm.define "webapp", primary: true do |machine|
-        machine.vm.hostname = "webapp"
-        machine.vm.network "private_network", ip: "192.168.33.10"
+    config.vm.define "msg", primary: true do |machine|
+        machine.vm.hostname = "msg"
+        machine.vm.network "private_network", ip: "192.168.33.20"
         machine.vm.provider "virtualbox" do |vb|
-            vb.name = "vagrant_ansible_webapp"
+            vb.name = "vagrant_ansible_msg"
             vb.gui = false
-            # 1/4 of your machines memory
-            vb.memory = "2048"
-            # 1/2 of your machines CPUs
-            vb.cpus = 2
-        end
-        machine.vm.provision :ansible_local do |ansible|
-            # ansible.verbose = "v"
-            ansible.compatibility_mode = "2.0"
-            ansible.playbook = "./provisioning/webapp_playbook.yml"
-            ansible.inventory_path = "./provisioning/development.yml"
-        end
-    end
-
-    # Jenkins machine definition
-    config.vm.define "jenkins", primary: true do |machine|
-        machine.vm.hostname = "jenkins"
-        machine.vm.network "private_network", ip: "192.168.33.11"
-        machine.vm.provider "virtualbox" do |vb|
-            vb.name = "vagrant_ansible_jenkins"
-            vb.gui = false
-            vb.memory = "256"
+            vb.memory = "512"
             vb.cpus = 1
         end
         machine.vm.provision :ansible_local do |ansible|
             # ansible.verbose = "v"
             ansible.compatibility_mode = "2.0"
-            ansible.playbook = "./provisioning/jenkins_playbook.yml"
-            ansible.inventory_path = "./provisioning/development.yml"
+            ansible.playbook = "./provisioning/msg_playbook.yml"
+            ansible.inventory_path = "./provisioning/msg_development.yml"
         end
     end
-
-#    config.vm.provision :ansible_local do |ansible|
-#        # ansible.verbose = "v"
-#        ansible.compatibility_mode = "2.0"
-#        ansible.playbook = "./provisioning/webapp_playbook.yml"
-#        ansible.inventory_path = "./provisioning/development.yml"
-#    end
 end
