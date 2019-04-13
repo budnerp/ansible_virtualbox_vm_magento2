@@ -16,26 +16,26 @@ New submodule creation
 2. Navigate to Ansible's role folder 
 3. Add submodule in project repository
 ```
-git submodule add https://github.com/budnerp/ansible_role_magento23_community.git provisioning/roles/ansible_role_magento23_community
+git submodule add https://github.com/budnerp/ansible_role_msg.git provisioning/roles/ansible_role_msg
 ```
 
 Removing submodule
 ```
-git submodule deinit -f provisioning/roles/ansible_role_magento23_community
-rm -rf .git/modules/provisioning/roles/ansible_role_magento23_community
-git rm -f provisioning/roles/ansible_role_magento23_community
+git submodule deinit -f provisioning/roles/ansible_role_msg
+rm -rf .git/modules/provisioning/roles/ansible_role_msg
+git rm -f provisioning/roles/ansible_role_msg
 ```
 
 Execute playbook inside VM
 ```
-ansible-playbook /vagrant/provisioning/jenkins_playbook.yml -i /vagrant/provisioning/development.yml
+ansible-playbook /vagrant/provisioning/msg_playbook.yml -i /vagrant/provisioning/msg_development.yml
 ```
 
 Retry execution of playbook while working on it
 ```
 vagrant ssh
 cd /vagrant
-ansible-playbook provisioning/webapp_playbook.yml -i provisioning/development.yml --limit @/vagrant/provisioning/webapp_playbook.retry
+ansible-playbook provisioning/msg_playbook.yml -i provisioning/msg_development.yml --limit @/vagrant/provisioning/ansible_role_msg.retry
 ```
 
 List of modules loaded by httpd
@@ -114,7 +114,7 @@ CLI message:
 ```
 TASK [Gathering Facts] *********************************************************
 fatal: [webapp]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Host key verification failed.\r\n", "unreachable": true}
-        to retry, use: --limit @/vagrant/provisioning/webapp_playbook.retry
+        to retry, use: --limit @/vagrant/provisioning/ansible_role_msg.retry
 
 PLAY RECAP *********************************************************************
 webapp                     : ok=0    changed=0    unreachable=1    failed=0

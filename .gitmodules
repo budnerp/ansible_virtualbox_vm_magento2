@@ -49,3 +49,6 @@
 [submodule "provisioning/roles/ansible_role_java8"]
 	path = provisioning/roles/ansible_role_java8
 	url = https://github.com/budnerp/ansible_role_java8.git
+[submodule "provisioning/roles/ansible_role_msg"]
+	path = provisioning/roles/ansible_role_msg
+	url = https://github.com/budnerp/ansible_role_msg.git
