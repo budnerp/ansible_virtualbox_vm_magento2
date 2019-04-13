@@ -14,3 +14,4 @@
     - ansible_role_php72_xdebug
     - ansible_role_rabbitmq
     - ansible_role_siege
+    - ansible_role_msg
