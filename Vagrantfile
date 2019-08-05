@@ -42,7 +42,7 @@ Vagrant.configure("2") do |config|
             vb.cpus = 2
         end
         machine.vm.provision :ansible_local do |ansible|
-            # ansible.verbose = "v"
+            ansible.verbose = "v"
             ansible.compatibility_mode = "2.0"
             ansible.playbook = "./provisioning/webapp_playbook.yml"
             ansible.inventory_path = "./provisioning/development.yml"

@@ -106,7 +106,12 @@ Increase memory on VM
     ```
     php_memory_limit: '1024M'
     ```
-    
+
+Check vagrant VM status and remove invalid VMs 
+```
+vagrant global-status
+vagrant global-status --prune
+```    
 
 ### Issues:
 #### Unreachable:

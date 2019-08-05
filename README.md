@@ -10,6 +10,9 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
         - private_network, ip: 192.168.33.10
         - 2 CPU, 2048MB of memory
         - SSH on port 22
+    - Machine "jenkins":
+        - private_network, ip: 192.168.33.11
+        - 1 CPU, 256MB of memory
 - Epel and Remi's RPM repositories
 - Common tools: `htop`, `vim`, `nano`, `mc`, `lsof`, `wget`, `zip`, `unzip`
 - GIT 2.9
@@ -52,7 +55,9 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
     git clone https://github.com/budnerp/vagrant_ansible.git
     git submodule init
     git submodule update
-    vagrant up
+    vagrant up // to build all VMs
+    vagrant up webapp // to build web application machine
+    vagrant up jenkins // to build jenkins machine
     ```
 3. Set a domain in your hosts file (add a line in C:\Windows\System32\drivers\etc\hosts). Refer to Vagrantfile's web.vm.hostname configuration. Example:
     ```
