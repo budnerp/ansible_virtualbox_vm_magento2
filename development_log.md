@@ -29,6 +29,7 @@ git rm -f provisioning/roles/ansible_role_magento23_community
 Execute playbook inside VM
 ```
 ansible-playbook /vagrant/provisioning/jenkins_playbook.yml -i /vagrant/provisioning/development.yml
+ansible-playbook /vagrant/provisioning/webapp_playbook.yml -i /vagrant/provisioning/development.yml
 ```
 
 Retry execution of playbook while working on it
@@ -112,6 +113,12 @@ Check vagrant VM status and remove invalid VMs
 vagrant global-status
 vagrant global-status --prune
 ```    
+
+Destroy machine after Vagrant upgrade 2.2.3 to 2.2.5 issues
+```
+vagrant plugin expunge --reinstall // permanently deletes all currently installed user plugins
+```
+
 
 ### Issues:
 #### Unreachable:
