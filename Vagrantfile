@@ -66,6 +66,7 @@ Vagrant.configure("2") do |config|
             ansible.inventory_path = "./provisioning/development.yml"
         end
     end
+    config.vm.define "jenkins", autostart: false
 
 #    config.vm.provision :ansible_local do |ansible|
 #        # ansible.verbose = "v"
