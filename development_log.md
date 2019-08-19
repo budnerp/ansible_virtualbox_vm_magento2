@@ -161,3 +161,8 @@ Add extra verbose setting ansible.verbose="vvv"
 [inventory]
 enable_plugins = yaml
 ```
+
+###Transition to docker
+https://medium.com/inloopx/speeding-up-project-setup-and-development-with-vagrant-db41061363a3
+
+https://www.netcentric.biz/insights/2017/08/aem-and-docker.html
