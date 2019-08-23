@@ -16,7 +16,7 @@ New submodule creation
 2. Navigate to Ansible's role folder 
 3. Add submodule in project repository
 ```
-git submodule add https://github.com/budnerp/ansible_role_magento23_community.git provisioning/roles/ansible_role_magento23_community
+git submodule add https://github.com/budnerp/ansible_role_nginx.git provisioning/roles/ansible_role_nginx
 ```
 
 Removing submodule
@@ -161,3 +161,8 @@ Add extra verbose setting ansible.verbose="vvv"
 [inventory]
 enable_plugins = yaml
 ```
+
+###Transition to docker
+https://medium.com/inloopx/speeding-up-project-setup-and-development-with-vagrant-db41061363a3
+
+https://www.netcentric.biz/insights/2017/08/aem-and-docker.html
