@@ -33,11 +33,12 @@ Vagrant.configure("2") do |config|
     config.vm.define "webapp", primary: true do |machine|
         machine.vm.hostname = "webapp"
         machine.vm.network "private_network", ip: "192.168.33.10"
+        machine.vm.network "forwarded_port", guest: 1080, host: 1080
         machine.vm.provider "virtualbox" do |vb|
             vb.name = "vagrant_ansible_webapp"
             vb.gui = false
             # 1/4 of your machines memory
-            vb.memory = "2048"
+            vb.memory = "4096"
             # 1/2 of your machines CPUs
             vb.cpus = 2
         end
@@ -50,7 +51,7 @@ Vagrant.configure("2") do |config|
     end
 
     # Jenkins machine definition
-    config.vm.define "jenkins", primary: true do |machine|
+    config.vm.define "jenkins", autostart: false do |machine|
         machine.vm.hostname = "jenkins"
         machine.vm.network "private_network", ip: "192.168.33.11"
         machine.vm.provider "virtualbox" do |vb|
@@ -66,7 +67,6 @@ Vagrant.configure("2") do |config|
             ansible.inventory_path = "./provisioning/development.yml"
         end
     end
-    config.vm.define "jenkins", autostart: false
 
 #    config.vm.provision :ansible_local do |ansible|
 #        # ansible.verbose = "v"
