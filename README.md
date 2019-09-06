@@ -28,11 +28,11 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
 - Redis 5.0 on port 6379, 3 databases by default
 - RabbitMQ 3.7 and it's dependency Erlang 21.2
 - Siege 4.0.2
-- Magento 2.3 Community
-    - Frontend: http://magento23ce.local/
-    - Backend: http://magento23ce.local/admin (default admin user: `admin`, password: `Admin12`)
+- Magento 2.3 Commerce (Community is available; just replace commerce role with community)
+    - Frontend: http://magento23ee.local/
+    - Backend: http://magento23ee.local/admin (default admin user: `admin`, password: `Admin12`)
     - Optional sample data
-    - Creates `magento` MySQL database
+    - Creates `magento23ee` MySQL database, user `magento23ee`, password `magento`
     - Consumes 3 Redis databases 0, 1 and 2
 
 ## Prerequisities
