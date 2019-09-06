@@ -16,7 +16,7 @@ New submodule creation
 2. Navigate to Ansible's role folder 
 3. Add submodule in project repository
 ```
-git submodule add https://github.com/budnerp/ansible_role_nginx.git provisioning/roles/ansible_role_nginx
+git submodule add https://github.com/budnerp/ansible_role_magento23.git provisioning/roles/ansible_role_magento23
 ```
 
 Removing submodule

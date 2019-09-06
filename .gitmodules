@@ -52,3 +52,6 @@
 [submodule "provisioning/roles/ansible_role_nginx"]
 	path = provisioning/roles/ansible_role_nginx
 	url = https://github.com/budnerp/ansible_role_nginx.git
+[submodule "provisioning/roles/ansible_role_magento23"]
+	path = provisioning/roles/ansible_role_magento23
+	url = https://github.com/budnerp/ansible_role_magento23.git
