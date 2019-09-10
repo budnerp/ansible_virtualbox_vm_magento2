@@ -119,6 +119,8 @@ Destroy machine after Vagrant upgrade 2.2.3 to 2.2.5 issues
 vagrant plugin expunge --reinstall // permanently deletes all currently installed user plugins
 ```
 
+Pass arguments to Ansible via Vagrant
+https://gist.github.com/phantomwhale/9657134
 
 ### Issues:
 #### Unreachable:
