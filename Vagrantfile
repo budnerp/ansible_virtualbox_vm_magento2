@@ -50,24 +50,6 @@ Vagrant.configure("2") do |config|
         end
     end
 
-    # Jenkins machine definition
-    config.vm.define "jenkins", autostart: false do |machine|
-        machine.vm.hostname = "jenkins"
-        machine.vm.network "private_network", ip: "192.168.33.11"
-        machine.vm.provider "virtualbox" do |vb|
-            vb.name = "vagrant_ansible_jenkins"
-            vb.gui = false
-            vb.memory = "256"
-            vb.cpus = 1
-        end
-        machine.vm.provision :ansible_local do |ansible|
-            # ansible.verbose = "v"
-            ansible.compatibility_mode = "2.0"
-            ansible.playbook = "./provisioning/jenkins_playbook.yml"
-            ansible.inventory_path = "./provisioning/development.yml"
-        end
-    end
-
 #    config.vm.provision :ansible_local do |ansible|
 #        # ansible.verbose = "v"
 #        ansible.compatibility_mode = "2.0"

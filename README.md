@@ -55,17 +55,15 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
     git clone https://github.com/budnerp/vagrant_ansible.git
     git submodule init
     git submodule update
-    vagrant up // to build all VMs
-    vagrant up webapp // to build web application machine
-    vagrant up jenkins // to build jenkins machine
+    vagrant up webapp
     ```
 3. Set a domain in your hosts file (add a line in C:\Windows\System32\drivers\etc\hosts). Refer to Vagrantfile's web.vm.hostname configuration. Example:
     ```
-    192.168.33.10 webapp
+    192.168.33.10 webapp.local
     ```
 4. Validate www server. Example:
     ```
-    http://webapp
+    http://webapp.local
     ```
 5. SSH into the instance. Execute:
     ```
