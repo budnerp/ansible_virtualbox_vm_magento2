@@ -16,7 +16,7 @@ New submodule creation
 2. Navigate to Ansible's role folder 
 3. Add submodule in project repository
 ```
-git submodule add https://github.com/budnerp/ansible_role_magento23.git provisioning/roles/ansible_role_magento23
+git submodule add https://github.com/budnerp/ansible_role_magento23_commerce.git provisioning/roles/ansible_role_magento23_commerce
 ```
 
 Removing submodule
@@ -119,6 +119,8 @@ Destroy machine after Vagrant upgrade 2.2.3 to 2.2.5 issues
 vagrant plugin expunge --reinstall // permanently deletes all currently installed user plugins
 ```
 
+Pass arguments to Ansible via Vagrant
+https://gist.github.com/phantomwhale/9657134
 
 ### Issues:
 #### Unreachable:
