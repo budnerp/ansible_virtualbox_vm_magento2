@@ -74,6 +74,8 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
     $ git config --global user.name "John Doe"
     $ git config --global user.email johndoe@example.com
     ```
+7. Add Magento repository keys to `ansible_role_magento23_commerce/defaults/main.yml`
+
 
 ## Troubleshooting
 #### Vagrant files on VM does not reflect local repository
