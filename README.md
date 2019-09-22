@@ -10,9 +10,6 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
         - private_network, ip: 192.168.33.10
         - 2 CPU, 2048MB of memory
         - SSH on port 22
-    - Machine "jenkins":
-        - private_network, ip: 192.168.33.11
-        - 1 CPU, 256MB of memory
 - Epel and Remi's RPM repositories
 - Common tools: `htop`, `vim`, `nano`, `mc`, `lsof`, `wget`, `zip`, `unzip`, `nc`
 - GIT 2.9

@@ -18,7 +18,7 @@ New submodule creation
 ```
 git submodule add https://github.com/budnerp/ansible_role_python3.git provisioning/roles/ansible_role_python3
 ```
-https://github.com/budnerp/ansible_role_python3.git
+
 Removing submodule
 ```
 git submodule deinit -f provisioning/roles/ansible_role_magento23
