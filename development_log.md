@@ -1,5 +1,11 @@
 # Dev log
 
+Check open ports
+```
+sudo lsof -i -P -n | grep LISTEN
+netstat -vatn
+```
+
 Check repo list
 ```
 yum repolist
