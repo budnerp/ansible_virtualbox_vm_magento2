@@ -16,9 +16,9 @@ New submodule creation
 2. Navigate to Ansible's role folder 
 3. Add submodule in project repository
 ```
-git submodule add https://github.com/budnerp/ansible_role_magento23_commerce.git provisioning/roles/ansible_role_magento23_commerce
+git submodule add https://github.com/budnerp/ansible_role_python3.git provisioning/roles/ansible_role_python3
 ```
-
+https://github.com/budnerp/ansible_role_python3.git
 Removing submodule
 ```
 git submodule deinit -f provisioning/roles/ansible_role_magento23
@@ -82,7 +82,7 @@ Check memory status
 free -h
 ```
 
-Python pexpect Ansible tasks
+Python pexpect Ansible tasks (not working; rpm is not there anymore)
 ```
   - yum:
       name: http://widehat.opensuse.org/opensuse/distribution/leap/42.3/repo/oss/suse/noarch/python-pexpect-3.3-6.1.noarch.rpm
