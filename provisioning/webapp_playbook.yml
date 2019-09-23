@@ -8,11 +8,9 @@
   roles:
     - ansible_role_extra_repositories # Enable EPEL and Remi's repositories
     - ansible_role_common
-#    - ansible_role_python3
     - ansible_role_git
     - ansible_role_apache2
     - ansible_role_selinux # disable SELinux
-#    - ansible_role_nginx
     - ansible_role_php72
     - ansible_role_php72_xdebug
     - ansible_role_mysql

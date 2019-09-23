@@ -27,9 +27,9 @@ git submodule add https://github.com/budnerp/ansible_role_python3.git provisioni
 
 Removing submodule
 ```
-git submodule deinit -f provisioning/roles/ansible_role_magento23
-rm -rf .git/modules/provisioning/roles/ansible_role_java8
-git rm -f provisioning/roles/ansible_role_java8
+git submodule deinit -f provisioning/roles/ansible_role_python3
+rm -rf .git/modules/provisioning/roles/ansible_role_python3
+git rm -f provisioning/roles/ansible_role_python3
 ```
 
 Execute playbook inside VM
