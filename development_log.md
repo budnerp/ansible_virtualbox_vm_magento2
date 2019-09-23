@@ -43,6 +43,7 @@ Retry execution of playbook while working on it
 vagrant ssh
 cd /vagrant
 ansible-playbook provisioning/webapp_playbook.yml -i provisioning/development.yml --limit @/vagrant/provisioning/webapp_playbook.retry
+ansible-playbook provisioning/testing_playbook.yml -i provisioning/development.yml
 ```
 
 List of modules loaded by httpd

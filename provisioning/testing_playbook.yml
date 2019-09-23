@@ -11,5 +11,5 @@
 #    - ansible_role_php72
 #    - ansible_role_siege
 #    - ansible_role_extra_repositories
-#    - ansible_role_python3
-    - ansible_role_magento23_commerce
+    - ansible_role_python3
+#    - ansible_role_magento23_commerce
