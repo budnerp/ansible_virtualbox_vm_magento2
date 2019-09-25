@@ -23,6 +23,7 @@ New submodule creation
 3. Add submodule in project repository
 ```
 git submodule add https://github.com/budnerp/ansible_role_python3.git provisioning/roles/ansible_role_python3
+git submodule add https://github.com/budnerp/ansible_role_nodejs.git provisioning/roles/ansible_role_nodejs
 ```
 
 Removing submodule
@@ -61,6 +62,7 @@ Check if a package is available in repositories
     ```
     yum info php72
     yum search xdebug
+    yum list | grep nodejs
     yum repolist all | grep mysql
     ```
 2. Ubuntu/Debian
