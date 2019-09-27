@@ -14,3 +14,12 @@
 #    - ansible_role_python3
 #    - ansible_role_nodejs
     - ansible_role_magento23_commerce
+
+#  vars_prompt:
+#    - name: magento_public_key
+#      prompt: "What is your Magento public key?"
+#      private: no
+#
+#    - name: magento_private_key
+#      prompt: "What is your Magento private key?"
+#      private: no
