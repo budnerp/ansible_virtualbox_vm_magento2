@@ -24,6 +24,7 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
     - mysql_innodb_buffer_pool_size: 512MB
 - Redis 5.0 on port 6379, 3 databases by default
 - RabbitMQ 3.7 and it's dependency Erlang 21.3
+- MailCatcher
 - Siege 4.0.2
 - Magento 2.3 Commerce (Community is available, just use https://github.com/budnerp/ansible_role_magento23_community)
     - Frontend: https://magento23ee.local/
@@ -52,27 +53,37 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
     git clone https://github.com/budnerp/vagrant_ansible.git
     git submodule init
     git submodule update
-    vagrant up webapp
     ```
-3. Set a domain in your hosts file (add a line in C:\Windows\System32\drivers\etc\hosts). Refer to Vagrantfile's web.vm.hostname configuration. Example:
+3. Provide Magento 2 repository credentials (magento_public_key, magento_private_key).
     ```
-    192.168.33.10 webapp.local
+    vim provisioning/roles/ansible_role_magento23_commerce/defaults/main.yml
     ```
-4. Validate www server. Example:
+4. Run the machine
     ```
-    http://webapp.local
+    vagrant up
     ```
-5. SSH into the instance. Execute:
+5. Set a domain in your hosts file (add a line in C:\Windows\System32\drivers\etc\hosts). Refer to Vagrantfile's web.vm.hostname configuration. Example:
+    ```
+    192.168.33.10 magento23ee.local
+    192.168.33.10 mailcatcher.local
+    ```
+6. Validate if Magento is installed:
+    ```
+    https://magento23ee.local
+    ```
+7. Validate MailCatcher service. Example:
+    ```
+    http://mailcatcher.local:1080
+    ```
+8. SSH into the instance. Execute:
     ```
     vagrant ssh webapp
     ```
-6. Setup GIT config (if ansible_role_git is a part of playbook)
+9. Setup GIT config (if ansible_role_git is a part of playbook)
     ```
     $ git config --global user.name "John Doe"
     $ git config --global user.email johndoe@example.com
     ```
-7. Add Magento repository keys to `ansible_role_magento23_commerce/defaults/main.yml`
-
 
 ## Troubleshooting
 #### Vagrant files on VM does not reflect local repository
