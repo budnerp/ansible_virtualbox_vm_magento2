@@ -24,6 +24,8 @@ New submodule creation
 ```
 git submodule add https://github.com/budnerp/ansible_role_python3.git provisioning/roles/ansible_role_python3
 git submodule add https://github.com/budnerp/ansible_role_nodejs.git provisioning/roles/ansible_role_nodejs
+git submodule add https://github.com/budnerp/ansible_role_elasticsearch.git provisioning/roles/ansible_role_elasticsearch
+git submodule add https://github.com/budnerp/ansible_role_java8.git provisioning/roles/ansible_role_java8
 ```
 
 Removing submodule

@@ -13,7 +13,9 @@
 #    - ansible_role_extra_repositories
 #    - ansible_role_python3
 #    - ansible_role_nodejs
-    - ansible_role_magento23_commerce
+    - ansible_role_java8
+    - ansible_role_elasticsearch
+#    - ansible_role_magento23_commerce
 
 #  vars_prompt:
 #    - name: magento_public_key
