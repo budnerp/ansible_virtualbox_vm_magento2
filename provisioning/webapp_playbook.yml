@@ -19,4 +19,6 @@
     - ansible_role_nodejs
     - ansible_role_mailcatcher
     - ansible_role_siege
+    - ansible_role_java8
+    - ansible_role_elasticsearch
     - ansible_role_magento23_commerce

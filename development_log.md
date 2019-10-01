@@ -39,6 +39,7 @@ Execute playbook inside VM
 ```
 ansible-playbook /vagrant/provisioning/jenkins_playbook.yml -i /vagrant/provisioning/development.yml
 ansible-playbook /vagrant/provisioning/webapp_playbook.yml -i /vagrant/provisioning/development.yml
+ansible-playbook /vagrant/provisioning/testing_playbook.yml -i /vagrant/provisioning/development.yml
 ```
 
 Retry execution of playbook while working on it
