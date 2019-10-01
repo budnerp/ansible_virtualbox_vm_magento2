@@ -26,6 +26,9 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
 - RabbitMQ 3.7 and it's dependency Erlang 21.3
 - MailCatcher
 - Siege 4.0.2
+- Java 1.8
+- ElasticSearch 6 on port 9200
+    - Cluster health under: `http://magento23ee.local:9200/_cluster/health`
 - Magento 2.3 Commerce (Community is available, just use https://github.com/budnerp/ansible_role_magento23_community)
     - Frontend: https://magento23ee.local/
     - Backend: https://magento23ee.local/admin (default admin user: `admin`, password: `Admin12`)
