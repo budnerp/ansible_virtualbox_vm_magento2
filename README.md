@@ -89,6 +89,17 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
     ```
 
 ## Troubleshooting
+#### Magento credentials issue
+If provisioning ended up with error with Magento credentials add them in file:
+```
+provisioning/roles/ansible_role_magento23_commerce/defaults/main.yml
+```
+and re-provision the VM
+```
+vagrant rsync
+vagrant provision
+```
+
 #### Vagrant files on VM does not reflect local repository
 If you made changes on host machine (eg. changed roles, Vagranfile etc.) run
 ```
