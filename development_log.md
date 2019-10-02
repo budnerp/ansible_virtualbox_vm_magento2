@@ -24,19 +24,22 @@ New submodule creation
 ```
 git submodule add https://github.com/budnerp/ansible_role_python3.git provisioning/roles/ansible_role_python3
 git submodule add https://github.com/budnerp/ansible_role_nodejs.git provisioning/roles/ansible_role_nodejs
+git submodule add https://github.com/budnerp/ansible_role_elasticsearch.git provisioning/roles/ansible_role_elasticsearch
+git submodule add https://github.com/budnerp/ansible_role_java8.git provisioning/roles/ansible_role_java8
 ```
 
 Removing submodule
 ```
-git submodule deinit -f provisioning/roles/ansible_role_python3
-rm -rf .git/modules/provisioning/roles/ansible_role_python3
-git rm -f provisioning/roles/ansible_role_python3
+git submodule deinit -f provisioning/roles/ansible_role_docker_rabbitmq
+rm -rf .git/modules/provisioning/roles/ansible_role_docker_rabbitmq
+git rm -f provisioning/roles/ansible_role_docker_rabbitmq
 ```
 
 Execute playbook inside VM
 ```
 ansible-playbook /vagrant/provisioning/jenkins_playbook.yml -i /vagrant/provisioning/development.yml
 ansible-playbook /vagrant/provisioning/webapp_playbook.yml -i /vagrant/provisioning/development.yml
+ansible-playbook /vagrant/provisioning/testing_playbook.yml -i /vagrant/provisioning/development.yml
 ```
 
 Retry execution of playbook while working on it

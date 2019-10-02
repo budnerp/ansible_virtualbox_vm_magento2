@@ -19,12 +19,6 @@
 [submodule "provisioning/roles/ansible_role_mysql"]
 	path = provisioning/roles/ansible_role_mysql
 	url = https://github.com/budnerp/ansible_role_mysql.git
-[submodule "provisioning/roles/ansible_role_docker_ce"]
-	path = provisioning/roles/ansible_role_docker_ce
-	url = https://github.com/budnerp/ansible_role_docker_ce.git
-[submodule "provisioning/roles/ansible_role_docker_rabbitmq"]
-	path = provisioning/roles/ansible_role_docker_rabbitmq
-	url = https://github.com/budnerp/ansible_role_docker_rabbitmq.git
 [submodule "provisioning/roles/ansible_role_rabbitmq"]
 	path = provisioning/roles/ansible_role_rabbitmq
 	url = https://github.com/budnerp/ansible_role_rabbitmq.git
@@ -37,9 +31,6 @@
 [submodule "provisioning/roles/ansible_role_mailcatcher"]
 	path = provisioning/roles/ansible_role_mailcatcher
 	url = https://github.com/budnerp/ansible_role_mailcatcher.git
-[submodule "provisioning/roles/ansible_role_magento23_community"]
-	path = provisioning/roles/ansible_role_magento23_community
-	url = https://github.com/budnerp/ansible_role_magento23_community.git
 [submodule "provisioning/roles/ansible_role_siege"]
 	path = provisioning/roles/ansible_role_siege
 	url = https://github.com/budnerp/ansible_role_siege.git
@@ -52,3 +43,9 @@
 [submodule "provisioning/roles/ansible_role_nodejs"]
 	path = provisioning/roles/ansible_role_nodejs
 	url = https://github.com/budnerp/ansible_role_nodejs.git
+[submodule "provisioning/roles/ansible_role_elasticsearch"]
+	path = provisioning/roles/ansible_role_elasticsearch
+	url = https://github.com/budnerp/ansible_role_elasticsearch.git
+[submodule "provisioning/roles/ansible_role_java8"]
+	path = provisioning/roles/ansible_role_java8
+	url = https://github.com/budnerp/ansible_role_java8.git
