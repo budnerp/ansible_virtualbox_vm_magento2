@@ -5,6 +5,17 @@
   become_method: sudo
   become_user: root
 
+#  pre_tasks:
+#    - pause:
+#        prompt: "What is your Magento public key?"
+#      when: magento_public_key==''
+#      register: magento_public_key
+#
+#    - pause:
+#        prompt: "What is your Magento private key?"
+#      when: magento_private_key==''
+#      register: magento_private_key
+
   roles:
 #    - ansible_role_redis
 #    - ansible_role_mailcatcher
@@ -13,7 +24,7 @@
 #    - ansible_role_extra_repositories
 #    - ansible_role_python3
 #    - ansible_role_nodejs
-#    - ansible_role_java8
+    - ansible_role_java8
     - ansible_role_elasticsearch
 #    - ansible_role_magento23_commerce
 
