@@ -88,6 +88,10 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
     $ git config --global user.email johndoe@example.com
     ```
 
+## For interested
+- Keep in mind that Vagrantfile forces Vagrant not to check for updates. Do it manually if needed.
+- Experiment what configuration of host resources assigned to VM works best for you. Change CPU and memory. 
+
 ## Troubleshooting
 #### Magento credentials issue
 If provisioning ended up with error with Magento credentials add them in file:
