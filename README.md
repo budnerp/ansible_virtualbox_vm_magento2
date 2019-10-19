@@ -7,8 +7,8 @@ Virtual machine environment based on VirtualBox, Vagrant and Ansible for Magento
 - Defaults: 
     - Ansible (local) 2.x installed 
     - Machine "webapp":
-        - private_network, ip: 192.168.43.10
-        - 2 CPU, 2048MB of memory
+        - private_network, ip: 192.168.33.10
+        - 2 CPU, 4096MB of memory
         - SSH on port 22
 - Epel and Remi's RPM repositories
 - Common tools: `htop`, `vim`, `nano`, `mc`, `lsof`, `wget`, `zip`, `unzip`, `nc`
@@ -69,7 +69,7 @@ Virtual machine environment based on VirtualBox, Vagrant and Ansible for Magento
     ```
 5. Set a domain in your hosts file (add a line in C:\Windows\System32\drivers\etc\hosts). Refer to Vagrantfile's web.vm.hostname configuration. Example:
     ```
-    192.168.43.10 magento23ee.local
+    192.168.33.10 magento23ee.local
     ```
 6. Validate if Magento is installed:
     ```
@@ -88,7 +88,7 @@ Virtual machine environment based on VirtualBox, Vagrant and Ansible for Magento
 ## MailCatcher
 1. Set a domain in your hosts file (add a line in C:\Windows\System32\drivers\etc\hosts). Refer to Vagrantfile's web.vm.hostname configuration. Example:
     ```
-    192.168.43.10 mailcatcher.local
+    192.168.33.10 mailcatcher.local
     ```
 2. SSH into the instance. Execute:
     ```
