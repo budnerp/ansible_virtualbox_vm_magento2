@@ -54,7 +54,7 @@ Virtual machine environment based on VirtualBox, Vagrant and Ansible for Magento
     ```
 2. Clone repository, pull sub-modules and start provisioning
     ```
-    git clone https://innersource.accenture.com/scm/magp/ansible-virtualbox-vm-magento2.git
+    git clone https://innersource.accenture.com/scm/magp/ansible_virtualbox_vm_magento2.git
     git submodule init
     git submodule update
     ```
