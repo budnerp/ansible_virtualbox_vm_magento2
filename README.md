@@ -1,5 +1,5 @@
-# Vagrant and Ansible
-VirtualBox virtual machine environment integrated with Vagrant and Ansible.
+# Virtualbox based machine for Magento 2 development
+Virtual machine environment based on VirtualBox, Vagrant and Ansible for Magento 2 development.
 
 ## What's inside?
 - Based on [centos/7](https://app.vagrantup.com/centos/boxes/7) box
@@ -7,7 +7,7 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
 - Defaults: 
     - Ansible (local) 2.x installed 
     - Machine "webapp":
-        - private_network, ip: 192.168.33.10
+        - private_network, ip: 192.168.43.10
         - 2 CPU, 2048MB of memory
         - SSH on port 22
 - Epel and Remi's RPM repositories
@@ -24,12 +24,12 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
     - mysql_innodb_buffer_pool_size: 512MB
 - Redis 5.0 on port 6379, 3 databases by default
 - RabbitMQ 3.7 and it's dependency Erlang 21.3
-- MailCatcher
+- MailCatcher (not started by default)
 - Siege 4.0.2
 - Java 1.8
 - ElasticSearch 6 on port 9200
     - Cluster health under: `http://magento23ee.local:9200/_cluster/health`
-- Magento 2.3 Commerce (Community is available, just use https://github.com/budnerp/ansible_role_magento23_community)
+- Magento 2.3 Commerce (Community is available, just use ansible-role-magento23-community)
     - Frontend: https://magento23ee.local/
     - Backend: https://magento23ee.local/admin (default admin user: `admin`, password: `Admin12`)
     - Optional sample data
@@ -43,6 +43,7 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
 - Virtual Box ver. >= 2.0
 
 ## Tested on
+- Virtual Box 6.0.10, Vagrant 2.2.5, Ansible 2.7.6, ContOS 7 build 1905.1
 - Virtual Box 6.0.4, Vagrant 2.2.3, Ansible 2.7.6, ContOS 7 build 1812.01
 - Virtual Box 6.0.2, Vagrant 2.2.3, Ansible 2.7.6, ContOS 7 build 1812.01
 
@@ -53,7 +54,7 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
     ```
 2. Clone repository, pull sub-modules and start provisioning
     ```
-    git clone https://github.com/budnerp/vagrant_ansible.git
+    git clone https://innersource.accenture.com/scm/magp/ansible-virtualbox-vm-magento2.git
     git submodule init
     git submodule update
     ```
@@ -61,36 +62,46 @@ VirtualBox virtual machine environment integrated with Vagrant and Ansible.
     ```
     vim provisioning/roles/ansible_role_magento23_commerce/defaults/main.yml
     ```
+    If you want to install sample data, set `magento_sampledata_install: '1'` in above yaml.
 4. Run the machine
     ```
     vagrant up
     ```
 5. Set a domain in your hosts file (add a line in C:\Windows\System32\drivers\etc\hosts). Refer to Vagrantfile's web.vm.hostname configuration. Example:
     ```
-    192.168.33.10 magento23ee.local
-    192.168.33.10 mailcatcher.local
+    192.168.43.10 magento23ee.local
     ```
 6. Validate if Magento is installed:
     ```
     https://magento23ee.local
     ```
-7. Validate MailCatcher service. Example:
+7. SSH into the instance. Execute:
     ```
-    http://mailcatcher.local:1080
+    vagrant ssh
     ```
-8. SSH into the instance. Execute:
-    ```
-    vagrant ssh webapp
-    ```
-9. Setup GIT config (if ansible_role_git is a part of playbook)
+8. Setup GIT config (if ansible-role-git is a part of playbook)
     ```
     $ git config --global user.name "John Doe"
     $ git config --global user.email johndoe@example.com
     ```
 
-## For interested
-- Keep in mind that Vagrantfile forces Vagrant not to check for updates. Do it manually if needed.
-- Experiment what configuration of host resources assigned to VM works best for you. Change CPU and memory. 
+## MailCatcher
+1. Set a domain in your hosts file (add a line in C:\Windows\System32\drivers\etc\hosts). Refer to Vagrantfile's web.vm.hostname configuration. Example:
+    ```
+    192.168.43.10 mailcatcher.local
+    ```
+2. SSH into the instance. Execute:
+    ```
+    vagrant ssh
+    ```
+3. Start the service
+    ```
+    sudo systemctl start mailcatcher.service
+    ```
+4. Validate MailCatcher service. Example:
+    ```
+    http://mailcatcher.local:1080
+    ```
 
 ## Troubleshooting
 #### Magento credentials issue
@@ -127,19 +138,5 @@ vagrant plugin install vagrant-vbguest
 - Latest configuration ansible.cfg in source control [https://raw.githubusercontent.com/ansible/ansible/devel/examples/ansible.cfg]()
 - 7 Tips To Turbo-charge Your Ansible [https://shadow-soft.com/turbo-charge-your-ansible/]()
 
-## TODO
--[ ] Allow user to choose system (centos, ubuntu)
--[ ] Make roles to be both centos/ubuntu friendly
--[ ] Ask a user whether to update repositories on machine provisioning/up
--[ ] Create Magento 2 role
-    -[ ] create vhost
-    -[ ] make vhost work for apache
-    -[ ] make vhost work for nginx
--[ ] Add role that adds vhost with php site that shows playbook roles and their readme.md files, contact (link with the tool).
--[ ] Add global variable: admin_name, admin_surname, admin_email to use in git and magento roles; check other roles
--[ ] Add roles for Magento frontend development
--[ ] Use host-vars to use role vars in other roles
-
 ## License
 Copyright (c) We Are Interactive under the MIT license.
-
