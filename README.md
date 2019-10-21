@@ -140,3 +140,15 @@ vagrant plugin install vagrant-vbguest
 
 ## License
 Copyright (c) We Are Interactive under the MIT license.
+
+## Thanks 🍻
+Special and many thanks to (in alphabetical order):
+```
+$ bszymanski
+$ dadamski
+$ jbialon
+$ [KrisRogozinski](https://github.com/KrisRogozinski)
+$ mpokora
+$ [mtwegrzycki](https://github.com/mtwegrzycki)
+$ pswiderski
+```
